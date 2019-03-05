@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:example1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+      
+        <ListBox Name="lbxEmployees" Grid.Row="0" Grid.Column="0" Margin="10" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10">
+            
+            <TextBox Name="tbxName" Margin="10"/>
+            <DatePicker Name="dpJoinDate" Margin="10"/>
+            <TextBox Name="tbxWages" Margin="10"/>
+           
+            <Button Name="btnAddEmployee"  Content="Add Employee" Click="BtnAddEmployee_Click"
+                    Width="100" Height="75"/>
+
+            <TextBlock Name="tblkTotalWages" Margin="10"/>
+        </StackPanel>
+
         
+
+
     </Grid>
 </Window>
